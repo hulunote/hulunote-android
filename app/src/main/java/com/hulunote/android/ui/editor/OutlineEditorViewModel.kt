@@ -47,8 +47,11 @@ class OutlineEditorViewModel @Inject constructor(
             val result = navRepository.getNavList(noteId)
             result.fold(
                 onSuccess = { navList ->
-                    // Find root nav (the one with no parent or self-referencing parent)
-                    val rootNav = navList.find { it.parid == null || it.parid == it.id || it.parid.isBlank() }
+                    // Find root nav: parid is null, blank, self-referencing, or nil UUID
+                    val nilUuid = "00000000-0000-0000-0000-000000000000"
+                    val rootNav = navList.find {
+                        it.parid == null || it.parid == it.id || it.parid.isBlank() || it.parid == nilUuid
+                    }
                     val rootNavId = rootNav?.id
 
                     _uiState.value = _uiState.value.copy(

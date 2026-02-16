@@ -1,5 +1,6 @@
 package com.hulunote.android.ui.navigation
 
+import android.net.Uri
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -18,10 +19,10 @@ object Routes {
     const val EDITOR = "editor/{noteId}/{noteTitle}"
 
     fun notes(databaseId: String, databaseName: String) =
-        "notes/$databaseId/$databaseName"
+        "notes/$databaseId/${Uri.encode(databaseName)}"
 
     fun editor(noteId: String, noteTitle: String) =
-        "editor/$noteId/$noteTitle"
+        "editor/$noteId/${Uri.encode(noteTitle)}"
 }
 
 @Composable

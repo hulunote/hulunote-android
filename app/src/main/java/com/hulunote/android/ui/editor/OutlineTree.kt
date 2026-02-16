@@ -79,7 +79,7 @@ object OutlineTree {
      */
     fun orderBetween(prevOrder: Float?, nextOrder: Float?): Float {
         val prev = prevOrder ?: 0f
-        val next = nextOrder ?: (prev + 2f)
+        val next = nextOrder ?: (prev + 200f)
         return (prev + next) / 2f
     }
 
