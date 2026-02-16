@@ -76,7 +76,7 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 ## Backend
 
-This app connects to `https://www.hulunote.top`. The backend is built with Rust (Axum + PostgreSQL). See [hulunote-rust](../hulunote-rust) for the backend source.
+This app connects to `https://www.hulunote.top`. The backend is built with Rust (Axum + PostgreSQL). See [hulunote-rust](https://github.com/hulunote/hulunote-rust) for the backend source.
 
 ## License
 
