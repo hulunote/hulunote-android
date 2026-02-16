@@ -80,4 +80,4 @@ This app connects to `https://www.hulunote.top`. The backend is built with Rust 
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
