@@ -17,9 +17,7 @@ class TokenManager @Inject constructor(
         get() = prefs.getString(KEY_TOKEN, null)
         set(value) = prefs.edit().putString(KEY_TOKEN, value).apply()
 
-    var serverUrl: String
-        get() = prefs.getString(KEY_SERVER_URL, DEFAULT_SERVER_URL) ?: DEFAULT_SERVER_URL
-        set(value) = prefs.edit().putString(KEY_SERVER_URL, value).apply()
+    val serverUrl: String = SERVER_URL
 
     val isLoggedIn: Boolean
         get() = !token.isNullOrBlank()
@@ -30,7 +28,6 @@ class TokenManager @Inject constructor(
 
     companion object {
         private const val KEY_TOKEN = "jwt_token"
-        private const val KEY_SERVER_URL = "server_url"
-        const val DEFAULT_SERVER_URL = "http://10.0.2.2:6689"
+        const val SERVER_URL = "https://www.hulunote.top"
     }
 }

@@ -85,19 +85,6 @@ fun LoginScreen(
                     verticalArrangement = Arrangement.spacedBy(16.dp),
                 ) {
                     OutlinedTextField(
-                        value = uiState.serverUrl,
-                        onValueChange = viewModel::updateServerUrl,
-                        label = { Text("Server URL") },
-                        modifier = Modifier.fillMaxWidth(),
-                        singleLine = true,
-                        shape = RoundedCornerShape(10.dp),
-                        colors = OutlinedTextFieldDefaults.colors(
-                            focusedBorderColor = PurpleStart,
-                            cursorColor = PurpleStart,
-                        ),
-                    )
-
-                    OutlinedTextField(
                         value = uiState.email,
                         onValueChange = viewModel::updateEmail,
                         label = { Text("Email") },
